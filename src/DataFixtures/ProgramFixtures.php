@@ -35,10 +35,24 @@ class ProgramFixtures extends Fixture implements DependentFixtureInterface
 
     public function load(ObjectManager $manager)
     {
+        /*foreach (self::PROGRAM as $titleSerie => $content) {
+            $program = new Program();
+            $program->setTitle($titleSerie);
+            $program->setSynopsis($content['synopsis']);
+            $program->setCategory($this->getReference($content['category']));
+            $manager->persist($program);
+        }
+        $manager->flush();*/
+        //src/DataFixtures/ProgramFixtures.php
+
         $program = new Program();
-        $program->setTitle('Walking dead');
-        $program->setSynopsis('Des zombies envahissent la terre');
-        $program->setCategory($this->getReference('category_Action'));
+        $program->setTitle('Arcane');
+        $program->setCategory($this->getReference('category_Animation'));
+        $program->setSynopsis('Raconte l\'intensification des tensions entre deux villes suite à l\'apparition de nouvelles inventions qui menacent de provoquer une véritable révolution.');
+        $program->setPoster('');
+        $program->setCountry('France');
+        $program->setYear(2021);
+        $this->addReference('program_Arcane', $program);
         $manager->persist($program);
         $manager->flush();
     }
