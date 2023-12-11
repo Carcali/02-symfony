@@ -3,6 +3,7 @@
 {% block title %}Catégorie #{{ category_name.id }}{% endblock %}
 
 {% block body %}
+<section class="container container-lg">
     <div class="media">
         <div class="media-body">
         {% for program in program_list %}
@@ -21,4 +22,5 @@
     <a href="{{ path('category_index') }}">
         Retour à la liste des catégories
     </a>
+</section>
 {% endblock %}

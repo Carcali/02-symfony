@@ -3,6 +3,7 @@
 {% block title %}Série #{{ programs.id }}{% endblock %}
 
 {% block body %}
+<section class="container container-lg">
     <div class="media">
         <img class="align-self-start mr-3" src="{{programs.poster}}" alt="{{ programs.title }} poster">
         <div class="media-body">
@@ -22,4 +23,5 @@
     <a href="{{ path('program_index') }}">
         Retour à la liste des programmes
     </a>
+</section>
 {% endblock %}

@@ -3,6 +3,7 @@
 {% block title %}Saison #{{ season.number }}{% endblock %}
 
 {% block body %}
+<section class="container container-lg">
     <div>
         <ul>
         {% for episode in episodes %}
@@ -16,4 +17,5 @@
     <a href="{{ path('program_index') }}">
         Retour à la liste des saisons
     </a>
+</section>
 {% endblock %}

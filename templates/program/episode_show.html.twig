@@ -3,6 +3,7 @@
 {% block title %}Épisode #{{ episode.id }}{% endblock %}
 
 {% block body %}
+<section class="container container-lg">
         <div class="media-body">
             <h1 class="mt-0">{{ episode.title }}</h1>
             <p>{{ episode.synopsis }}</p>
@@ -11,4 +12,5 @@
     <a href="{{ path('program_index') }}">
         Retour à la liste des programmes
     </a>
+</section>
 {% endblock %}
