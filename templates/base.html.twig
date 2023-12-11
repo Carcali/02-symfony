@@ -16,6 +16,34 @@
     <header>
         {% include './_navbar.html.twig' %}
     </header>
+    {% for category, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for program, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ program }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for season, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ season }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for episode, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ episode }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
         {% block body %}{% endblock %}
     </body>
 </html>
